@@ -10,10 +10,10 @@ Blog Application is a software program that enables users to easily create and m
 ##### SIGNUP PAGE
 ![Sign-up](Screenshots/Sign-up.png)
 
-##### ALLPOSTS PAGE
-![All-posts](Screenshots/All-posts.png)
+##### ALL-POSTS PAGE
+![All-Posts](Screenshots/All-Posts.png)
 
-##### FULLPOSTVIEW PAGE
+##### Profile PAGE
 ![Profile](Screenshots/Profile.png)
 
 ##### ADDPOST PAGE
