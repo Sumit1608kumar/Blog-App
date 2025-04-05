@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/blogapp-backend.jar /app/blogapp-backend.jar
+COPY --from=build /target/BlogApp-backend.jar /app/blogapp-backend.jar
 EXPOSE 8080
 ENTRYPOINT [ "java","-jar" ,"/app/blogapp-backend.jar" ]
