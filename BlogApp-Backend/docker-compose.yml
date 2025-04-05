@@ -29,7 +29,7 @@ volumes:
 services:      
   blogapp-backend: #name that can be reffered inside this file
     build: .
-    image: r15priyanshu/blogapp-backend:latest
+    image: blogapp-backend:latest
     restart: always
     container_name: blogapp-backend-instance
     networks: 
