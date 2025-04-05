@@ -7,7 +7,7 @@ FROM maven:3.9.4-eclipse-temurin-17 AS builder
 WORKDIR /app/blogapp
 
 # Copy all project files into the container
-COPY target/blogapp-backend.jar 
+COPY . .
 
 # Build the project and skip tests (faster)
 RUN ./mvnw clean install -DskipTests
