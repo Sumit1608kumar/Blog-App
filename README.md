@@ -5,19 +5,19 @@ Blog Application is a software program that enables users to easily create and m
 ![Home](Screenshots/Home.png)
 
 ##### LOGIN PAGE
-![Login](Screenshots/Login.PNG)
+![Login](Screenshots/Login.png)
 
 ##### SIGNUP PAGE
-![Sign-up](Screenshots/Sign-up.PNG)
+![Sign-up](Screenshots/Sign-up.png)
 
 ##### ALLPOSTS PAGE
-![All-posts](Screenshots/All-posts.PNG)
+![All-posts](Screenshots/All-posts.png)
 
 ##### FULLPOSTVIEW PAGE
-![Profile](Screenshots/Profile.PNG)
+![Profile](Screenshots/Profile.png)
 
 ##### ADDPOST PAGE
-![Post](Screenshots/Post.PNG)
+![Post](Screenshots/Post.png)
 
 ### QUICK GUIDE/STEPS TO RUN THE PROJECT:
 1. Clone the project.
