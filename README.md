@@ -2,7 +2,7 @@
 Blog Application is a software program that enables users to easily create and manage blog posts. It is built using React and SpringBoot
  
 ##### HOME PAGE
-![Home](Screenshots/Home.PNG)
+![Home](./Screenshots/Home.PNG)
 
 ##### LOGIN PAGE
 ![Login](Screenshots/Login.PNG)
@@ -32,13 +32,5 @@ create database blogapp_db;
 6. Open STS IDE and import the cloned Project [BlogApp-Backend] , Run the project as SpringBoot App.
 7. Install NodeJS and Node Package Manager, Move inside [BlogApp-Frontend] folder and open it in vscode and Run npm install , npm start
 8. Visit http://localhost:3000/home for home page in your browser.
-
-#### RECENT/ADDITIONAL CHANGES :
-* You can now open the Swagger Documentation at : http://localhost:8080/swagger-ui/index.html
-* Docker File and Docker Compose File has been attached. Move to the BlogApp-Backend folder and run below command :
-  ```
-  docker compose -p "BlogApp-Backend" up --build
-  ```
-
 
 Enjoy BlogApp Blog Application !! 😊
