@@ -1,6 +1,26 @@
-FROM eclipse-temurin:17.0.10_7-jre-alpine
-RUN mkdir -p /app/blogapp
+# --------------------
+# 🏗️  STAGE 1: Build
+# --------------------
+FROM maven:3.9.4-eclipse-temurin-17 AS builder
+
+# Set working directory
 WORKDIR /app/blogapp
-COPY target/blogapp-backend.jar .
-EXPOSE 8080
+
+# Copy all project files into the container
+COPY target/blogapp-backend.jar 
+
+# Build the project and skip tests (faster)
+RUN ./mvnw clean install -DskipTests
+
+# ----------------------
+# 🚀 STAGE 2: Run
+# ----------------------
+FROM eclipse-temurin:17-jdk
+
+WORKDIR /app/blogapp
+
+# Copy the JAR from the builder stage
+COPY --from=builder /app/target/*.jar blogapp-backend.jar
+
+# Run the Spring Boot app
 CMD ["sh", "-c", "java $JAVA_OPTS -jar blogapp-backend.jar"]
