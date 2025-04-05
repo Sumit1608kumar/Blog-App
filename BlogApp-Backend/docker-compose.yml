@@ -1,0 +1,63 @@
+version: "3.9"
+
+#Defining Custom Network
+networks:
+  blogapp-network:
+    name: blogapp-network
+    driver: bridge
+
+#Defining Custom Volumes    
+volumes:
+  blogapp-database-data:
+    name: blogapp-database-data
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: D:\DockerVolumes\blogapp\mysql-data\
+      
+  blogapp-backend-data:
+    name: blogapp-backend-data
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: D:\DockerVolumes\blogapp\backend-data\
+
+#Defining Services Of Our Application
+
+services:      
+  blogapp-backend: #name that can be reffered inside this file
+    build: .
+    image: r15priyanshu/blogapp-backend:latest
+    restart: always
+    container_name: blogapp-backend-instance
+    networks: 
+      - blogapp-network
+    ports:
+      - 8080:8080
+    volumes:
+      - blogapp-backend-data:/app/blogapp/ 
+    environment:
+      MYSQL_HOST: blogapp-mysql-instance #container name of mysql in the same network
+      MYSQL_PORT: 3306 #port on which mysql is running inside the container
+      JAVA_OPTS: -Dspring.profiles.active=prd
+    depends_on:
+      - blogapp-database
+      
+  blogapp-database:
+    image: mysql:8.0.36
+    container_name: blogapp-mysql-instance
+    networks:
+      - blogapp-network
+    ports:
+      - 4406:3306
+    volumes:
+      - blogapp-database-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root #This sets the password of the root user
+      MYSQL_DATABASE: blogapp #This creates the database also when first time instance is created
+      
+
+  
+  

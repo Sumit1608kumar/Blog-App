@@ -1,0 +1,19 @@
+# Node.js
+**/node_modules/
+**/.cache/
+
+# Logs
+*.log
+
+# Build output
+**/dist/
+**/build/
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
