@@ -56,7 +56,7 @@ services:
       - blogapp-database-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root #This sets the password of the root user
-      MYSQL_DATABASE: blogapp #This creates the database also when first time instance is created
+      MYSQL_DATABASE: blogapp_db #This creates the database also when first time instance is created
       
 
   
