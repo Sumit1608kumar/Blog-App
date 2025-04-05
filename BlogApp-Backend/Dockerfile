@@ -10,7 +10,7 @@ WORKDIR /app/blogapp
 COPY . .
 
 # Fix: Make mvnw executable
-RUN chmod +x mvnw
+RUN dos2unix mvnw && chmod +x mvnw
 
 # Build the project and skip tests (faster)
 RUN ./mvnw clean install -DskipTests
