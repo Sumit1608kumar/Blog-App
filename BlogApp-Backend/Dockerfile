@@ -9,6 +9,9 @@ WORKDIR /app/blogapp
 # Copy all project files into the container
 COPY . .
 
+# Fix: Make mvnw executable
+RUN chmod +x mvnw
+
 # Build the project and skip tests (faster)
 RUN ./mvnw clean install -DskipTests
 
