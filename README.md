@@ -2,7 +2,7 @@
 Blog Application is a software program that enables users to easily create and manage blog posts. It is built using React and SpringBoot
  
 ##### HOME PAGE
-![Home](./Screenshots/Home.PNG)
+![Home](Screenshots/Home.png)
 
 ##### LOGIN PAGE
 ![Login](Screenshots/Login.PNG)
